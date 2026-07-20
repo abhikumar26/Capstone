@@ -1,0 +1,17 @@
+{
+  "name": "capstone-project",
+  "private": true,
+  "workspaces": [
+    "Client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace server\" \"npm run dev --workspace Client\"",
+    "build": "npm run build --workspace Client",
+    "start": "npm run start --workspace server",
+    "heroku-postbuild": "npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

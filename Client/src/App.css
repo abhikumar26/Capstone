@@ -1,0 +1,40 @@
+.singleProduct{
+    width:80%;
+    margin:50px auto;
+    display:flex;
+    gap:50px;
+    align-items:center;
+}
+
+.singleProduct img{
+    width:350px;
+    height:350px;
+    object-fit:contain;
+}
+
+.singleProduct h1{
+    margin-bottom:20px;
+}
+
+.singleProduct h2{
+    color:green;
+    margin-bottom:20px;
+}
+
+.singleProduct p{
+    line-height:28px;
+    margin-bottom:30px;
+}
+
+.singleProduct button{
+    padding:12px 25px;
+    border:none;
+    background:black;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.singleProduct button:hover{
+    background:red;
+}
