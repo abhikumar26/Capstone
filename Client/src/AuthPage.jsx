@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 
 function AuthPage({ mode = 'login', onAuthSuccess, isModal = false }) {
