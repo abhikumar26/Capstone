@@ -33,12 +33,11 @@ function AuthPage({ mode = 'login', onAuthSuccess, isModal = false }) {
           onAuthSuccess();
         }
 
-        if (data.redirectTo) {
-          if (data.redirectTo.startsWith('http')) {
-            window.location.href = data.redirectTo;
-          } else {
-            navigate(data.redirectTo);
-          }
+        const target = data.redirectTo || '/';
+        if (target.startsWith('http')) {
+          window.location.href = target;
+        } else {
+          navigate(target);
         }
       }
     } catch (error) {
