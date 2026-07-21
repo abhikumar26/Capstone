@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
+
 function AuthPage({ mode = 'login', onAuthSuccess, isModal = false }) {
   const isSignup = mode === 'signup';
   const navigate = useNavigate();
@@ -13,7 +15,7 @@ function AuthPage({ mode = 'login', onAuthSuccess, isModal = false }) {
     event.preventDefault();
     setMessage('Please wait...');
 
-    const endpoint = isSignup ? '/api/signup' : '/api/login';
+    const endpoint = `${API_BASE_URL}/${isSignup ? 'signup' : 'login'}`;
     const payload = isSignup ? { name, email, password } : { email, password };
 
     try {
